@@ -1,9 +1,10 @@
 
 # Hello CLR/CLI
+`Starter/Example/Tutorial Project`
 
  Simple example/starter project for calling native C/C++ code from managed C# code and vice versa, using a CLR/CLI DLL as an intermediary.
 
-## Getting Started
+## Getting Started - CLR/CLI Tutorial
 
 This is not meant to be a full tutorial, just a sort of template to get you started quickly, so I wont go into too much detail, but I will explain some basics.
 
@@ -109,13 +110,13 @@ Because it was allocated with the [Marshal class][Marshal] and not [malloc][Mall
 So instead we must use [`LocalFree(HLOCAL)`](LocFree), which is actually what [Marshal.FreeHGlobal(IntPtr)](FreeHG) calls.
 One thing to note, that if you allocate a BSTR using [Marshal.StringToBSTR(String)][BSTR] or the other BSTR methods, you cannot use LocalFree, and must use [SysFreeString][SysFreeStr], which is what [Marshal.FreeBSTR(IntPtr)][FreeBSTR] uses.
 
-### End
+---
 
 Well those are the basics, and hopefully enough for you to get started. 
 I am certainly no CLI master who knows every in and out of the language, so hopefully everything I've said is accurate. 
 If you have any questions, feel free to open an issue and I will try to answer as best I can.
 
-Learning CLR at first can be pretty frustrating, and its quirks can be confusing, but once you get used to them it can be a very useful and powerful tool. 
+Learning CLR at first can be a little frustrating, and its quirks can sometimes be confusing, but once you get the hang of it, it can be a very useful and powerful tool. 
 
 
 
